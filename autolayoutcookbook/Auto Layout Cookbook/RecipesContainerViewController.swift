@@ -87,10 +87,14 @@ class RecipesContainerViewController: UIViewController {
     }
     
     @IBAction func showNextRecipe(_ sender: Any) {
+
+        currentRecipeIndex += 1
         
-        if currentRecipeIndex != recipes.count {
-            currentRecipeIndex += 1
+        if currentRecipeIndex >= recipes.count {
+            currentRecipeIndex = recipes.count - 1
+            return
         }
+
         let recipe = recipes[currentRecipeIndex]
         
         showRecipe(recipe: recipe)

@@ -12,7 +12,7 @@ class InformationViewController: UIViewController {
     // MARK: Properties 
     
     @IBOutlet weak var informationTextView: UITextView!
-    
+     
     /// Info supplied by the presenting `RecipiesContainerViewController`.
     var informationText: String?
     
